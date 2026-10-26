@@ -6,71 +6,114 @@
     <title>Vasos 3D - Catálogo de Impressões</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f9f9f9; color: #333; padding-bottom: 60px; }
-        header { background-color: #2c3e50; color: white; text-align: center; padding: 40px 20px; }
-        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        body { background-color: #f9f9f9; color: #333; padding-bottom: 80px; }
+        
+        header { background-color: #1a252f; color: white; text-align: center; padding: 50px 20px; }
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 1px; }
         header p { font-size: 1.1rem; color: #bdc3c7; }
+        
         .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        
+        /* Títulos das Categorias */
+        .category-title { font-size: 1.8rem; color: #1a252f; margin: 40px 0 20px 0; padding-bottom: 10px; border-bottom: 3px solid #34495e; display: flex; align-items: center; gap: 10px; }
+        .badge-pronta { background-color: #27ae60; color: white; font-size: 0.8rem; padding: 4px 8px; border-radius: 4px; text-transform: uppercase; }
+        .badge-encomenda { background-color: #2980b9; color: white; font-size: 0.8rem; padding: 4px 8px; border-radius: 4px; text-transform: uppercase; }
+        
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #eee; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); }
-        .card img { width: 100%; height: 250px; object-fit: cover; background-color: #eaeaea; }
+        
+        /* Cards dos Vasos */
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #eef0f2; transition: transform 0.2s, box-shadow 0.2s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .card img { width: 100%; height: 280px; object-fit: cover; background-color: #eaeaea; }
+        
         .card-content { padding: 20px; }
-        .card-title { font-size: 1.3rem; margin-bottom: 10px; color: #2c3e50; }
-        .card-desc { color: #666; font-size: 0.95rem; line-height: 1.4; margin-bottom: 15px; min-height: 40px; }
-        .card-price { font-size: 1.4rem; font-weight: bold; color: #27ae60; margin-bottom: 15px; }
-        .btn-whats { display: block; text-align: center; background-color: #25d366; color: white; text-decoration: none; padding: 12px; border-radius: 5px; font-weight: bold; transition: background 0.2s; }
-        .btn-whats:hover { background-color: #128c7e; }
-        footer { text-align: center; padding: 20px; color: #7f8c8d; font-size: 0.9rem; }
+        .card-title { font-size: 1.25rem; margin-bottom: 8px; color: #2c3e50; }
+        .card-desc { color: #666; font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; min-height: 45px; }
+        .card-meta { display: flex; justify-content: space-between; align-items: center; }
+        .card-price { font-size: 1.3rem; font-weight: bold; color: #2c3e50; }
+        
+        /* Botão Único Flutuante de WhatsApp */
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; text-decoration: none; padding: 15px 25px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 10px; z-index: 1000; transition: transform 0.2s, background-color 0.2s; }
+        .whatsapp-float:hover { transform: scale(1.05); background-color: #128c7e; }
+        
+        footer { text-align: center; padding: 40px 20px; color: #7f8c8d; font-size: 0.9rem; margin-top: 60px; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Vasos 3D</h1>
-        <p>Modelos exclusivos impressos com alta precisão para sua casa ou escritório</p>
+        <p>Catálogo exclusivo de vasos decorativos impressos em alta resolução</p>
     </header>
 
     <div class="container">
+        
+        <!-- CATEGORIA 1: PRONTA ENTREGA -->
+        <h2 class="category-title">Pronta Entrega <span class="badge-pronta">Envio Imediato</span></h2>
         <div class="grid">
             
-            <!-- PRODUTO 1 -->
             <div class="card">
-                <!-- Substitua 'vaso1.jpg' pelo nome real da sua foto depois -->
-                <img src="https://placeholder.com" alt="Vaso Origami">
+                <img src="https://placeholder.com" alt="Vaso Pronta Entrega">
                 <div class="card-content">
-                    <h2 class="card-title">Vaso Estilo Origami</h2>
-                    <p class="card-desc">Design moderno geométrico, perfeito para suculentas e plantas pequenas. Material PLA biodegradável.</p>
-                    <div class="card-price">R$ 45,00</div>
-                    <!-- Substitua o número abaixo pelo seu WhatsApp (com DDD) -->
-                    <a href="https://wa.me" target="_blank" class="btn-whats">Encomendar no WhatsApp</a>
+                    <h3 class="card-title">Vaso Geométrico Facetado</h3>
+                    <p class="card-desc">Cor: Cobre Metálico. Tamanho: 15cm de altura. Perfeito para decorar mesas de escritório.</p>
+                    <div class="card-meta">
+                        <div class="card-price">R$ 50,00</div>
+                    </div>
                 </div>
             </div>
 
-            <!-- PRODUTO 2 -->
             <div class="card">
-                <img src="https://placeholder.com" alt="Vaso Espiral">
+                <img src="https://placeholder.com" alt="Vaso Pronta Entrega">
                 <div class="card-content">
-                    <h2 class="card-title">Vaso Espiral Elegance</h2>
-                    <p class="card-desc">Linhas fluidas que criam um efeito de luz e sombra único. Ideal para destacar na sua sala.</p>
-                    <div class="card-price">R$ 60,00</div>
-                    <a href="https://wa.me" target="_blank" class="btn-whats">Encomendar no WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- PRODUTO 3 -->
-            <div class="card">
-                <img src="https://placeholder.com" alt="Vaso Bob">
-                <div class="card-content">
-                    <h2 class="card-title">Vaso Articulado "Bob"</h2>
-                    <p class="card-desc">O queridinho da impressão 3D. Vaso divertido em formato de boneco sentado, ideal para presentear.</p>
-                    <div class="card-price">R$ 35,00</div>
-                    <a href="https://wa.me" target="_blank" class="btn-whats">Encomendar no WhatsApp</a>
+                    <h3 class="card-title">Vaso Robert Plant Sentado</h3>
+                    <p class="card-desc">Cor: Branco Fosco. Ideal para mini suculentas ou cactos. O mais vendido!</p>
+                    <div class="card-meta">
+                        <div class="card-price">R$ 35,00</div>
+                    </div>
                 </div>
             </div>
 
         </div>
+
+        <!-- CATEGORIA 2: SOB ENCOMENDA -->
+        <h2 class="category-title">Sob Encomenda <span class="badge-encomenda">Escolha suas Cores</span></h2>
+        <div class="grid">
+            
+            <div class="card">
+                <img src="https://placeholder.com" alt="Vaso Sob Encomenda">
+                <div class="card-content">
+                    <h3 class="card-title">Vaso Espiral Orgânico Grande</h3>
+                    <p class="card-desc">Disponível em: Preto, Cobre, Azul e Verde. Prazo de produção: 3 dias úteis.</p>
+                    <div class="card-meta">
+                        <div class="card-price">R$ 85,00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://placeholder.com" alt="Vaso Sob Encomenda">
+                <div class="card-content">
+                    <h3 class="card-title">Vaso Texturizado Colmeia</h3>
+                    <p class="card-desc">Disponível em: Ouro Velho e Grafite. Acabamento premium em linhas suaves.</p>
+                    <div class="card-meta">
+                        <div class="card-price">R$ 65,00</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
+
+    <!-- BOTÃO ÚNICO FLUTUANTE DE WHATSAPP -->
+    <!-- Ajuste o número abaixo: coloque seu DDD + número (ex: 51999999999) após o /55 -->
+    <a href="https://wa.me.+5551991952703" target="_blank" class="whatsapp-float">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle;">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.69-4.98c-.202-.101-1.194-.588-1.378-.654-.184-.066-.317-.101-.45.101-.132.202-.513.654-.629.789-.117.135-.232.152-.434.051-2.01-1.007-3.301-2.079-4.187-3.602-.232-.4-.032-.618.168-.818.18-.18.4-.467.599-.7.2-.233.267-.367.4-.614.133-.248.067-.467-.034-.668-.101-.202-.45-1.087-.617-1.492-.162-.395-.327-.341-.45-.347-.117-.006-.252-.006-.388-.006-.136 0-.356.051-.543.253-.187.202-.713.698-.713 1.706 0 1.008.734 1.98 1.836 2.128 1.1.147 2.161.841 2.871 1.15.633.275 1.156.255 1.59.19.485-.072 1.194-.488 1.362-.958.169-.47.169-.872.119-.958-.05-.085-.18-.135-.381-.236z"/>
+        </svg>
+        Falar no WhatsApp
+    </a>
 
     <footer>
         <p>&copy; 2026 Vasos 3D - Todos os direitos reservados.</p>
